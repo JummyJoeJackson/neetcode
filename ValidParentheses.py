@@ -4,11 +4,11 @@ class Solution:
         open = ["(","{","["]
         close = [")","}","]"]
 
-        for i in range(len(s)):
-            if s[i] in open:
-                stack.append(s[i])
-            elif s[i] in close:
-                if len(stack) == 0 or open.index(stack[-1]) != close.index(s[i]):
+        for c in s:
+            if c in open:
+                stack.append(c)
+            elif c in close:
+                if len(stack) == 0 or open.index(stack[-1]) != close.index(c):
                     return False
                 stack.pop()
 
