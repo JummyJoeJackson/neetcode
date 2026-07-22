@@ -1,8 +1,5 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        if not prices:
-            return 0
-
         buy = prices[0]
         profit = 0
 
